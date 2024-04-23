@@ -3,7 +3,7 @@
 namespace App;
 
 class Question{
-    protected $anser;
+    protected $answer;
     protected $correct;
     public function __construct(protected $question, protected $solution)
     {
