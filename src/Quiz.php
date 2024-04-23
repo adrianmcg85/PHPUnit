@@ -19,9 +19,11 @@ class Quiz{
 
     public function grade()
     {
-        $correct = count(array_filter($this->questions, fn($question) => $question->correctAnswer()));
+        $correct = count($this->correctQuestions());
         return $correct / count($this->questions)*100;
+    }
 
-
+    public function correctQuestions(){
+        return array_filter($this->questions, fn($question) => $question->correctAnswer());
     }
 }
