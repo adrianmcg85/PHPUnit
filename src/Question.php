@@ -22,7 +22,8 @@ class Question
     {
         $this->answer = $answer;
 
-        return $this->correct = $answer === $this->solution;
+        // return $this->correct = $answer === $this->solution;
+        return $this->solved();
     }
 
     public function answered()
@@ -32,6 +33,7 @@ class Question
 
     public function solved()
     {
-        return $this->correct;
+        // return $this->correct;
+        return $this->answer === $this->solution;
     }
 }
